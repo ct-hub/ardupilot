@@ -586,7 +586,7 @@ public:
     // follow
     AP_Follow follow;
 #endif
-
+    AP_Float star_radius_cm;
 };
 
 extern const AP_Param::Info        var_info[];
