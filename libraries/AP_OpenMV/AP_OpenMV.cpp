@@ -84,7 +84,8 @@ bool AP_OpenMV::update()
             if(checksum == data) {
                 cx = _cx_temp;
                 cy = _cy_temp;
-                last_frame_ms = AP_HAL::millis();
+
+              //  last_frame_ms = AP_HAL::millis();
                 return true;
             }
             break;
