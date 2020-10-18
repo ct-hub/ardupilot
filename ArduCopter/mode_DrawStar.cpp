@@ -60,6 +60,10 @@ void Copter::ModeDrawStar::run()
         }
     }
 
+    else if((path_num == 6) && wp_nav->reached_wp_destination()){
+        gcs().send_text(MAV_SEVERITY_CRITICAL,"Draw star finished, now go into Rtl Mode.");
+        copter.set_mode(RTL, MODE_REASON_MISSION_END);
+    }
     pos_control_run();
 }
 
